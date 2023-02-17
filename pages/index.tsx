@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
 import {
   FaFacebookSquare,
   FaYoutube,
@@ -8,9 +8,9 @@ import {
   FaTwitter,
   FaTiktok,
   FaLinkedin,
-} from "react-icons/fa";
-import congregationPic from "../public/john-price-RAZQiZOX3mU-unsplash.jpg";
-import pastorPic from "../public/melyna-valle-3yiSaxd-V6Q-unsplash.jpg";
+} from 'react-icons/fa'
+import congregationPic from '../public/john-price-RAZQiZOX3mU-unsplash.jpg'
+import pastorPic from '../public/melyna-valle-3yiSaxd-V6Q-unsplash.jpg'
 
 export default function Home() {
   return (
@@ -22,6 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        {/* Above the fold section */}
         <section className="h-screen">
           <Image
             src={congregationPic}
@@ -38,7 +39,7 @@ export default function Home() {
                   Join us today as we worship the Lord
                 </p>
                 <Link
-                  href={"#"}
+                  href={'#'}
                   className="px-10 py-5 bg-secondary text-gray-900 rounded-md shadow-2xl"
                 >
                   Church With Us
@@ -47,14 +48,45 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* About Us */}
         <section className="py-10 bg-slate-300">
           <div className="container">
-            <h2 className="font-semibold text-3xl text-center mb-10">
-              About Us
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <Image src={pastorPic} alt="pastorPic" />
-              <div>
+            <div className="mb-10">
+              <h2 className="font-semibold text-3xl text-center mb-10">
+                About Us
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <Image src={pastorPic} alt="pastorPic" />
+                <div>
+                  <p className="mb-3">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Cum iste numquam explicabo maxime debitis non nulla error,
+                    eligendi consequuntur unde veritatis laboriosam molestias
+                    quod officia voluptatem officiis distinctio eaque
+                    voluptatibus.
+                  </p>
+                  <p className="mb-10">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Cum iste numquam explicabo maxime debitis non nulla error,
+                    eligendi consequuntur unde veritatis laboriosam molestias
+                    quod officia voluptatem officiis distinctio eaque
+                    voluptatibus.
+                  </p>
+                  <Link
+                    href={'#'}
+                    className="px-5 py-3 bg-tertiary rounded-md text-white"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="mb-14">
+              <h2 className="font-semibold text-3xl text-center mb-3">
+                Our Mission
+              </h2>
+              <div className="text-center">
                 <p className="mb-3">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
                   iste numquam explicabo maxime debitis non nulla error,
@@ -67,20 +99,64 @@ export default function Home() {
                   eligendi consequuntur unde veritatis laboriosam molestias quod
                   officia voluptatem officiis distinctio eaque voluptatibus.
                 </p>
-                <Link
-                  href={"#"}
-                  className="px-5 py-3 bg-tertiary rounded-md text-white"
-                >
-                  Learn More
-                </Link>
+              </div>
+            </div>
+            <div className="mb-14">
+              <h2 className="font-semibold text-3xl text-center mb-3">
+                Our Vission
+              </h2>
+              <div className="text-center">
+                <p className="mb-3">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
+                  iste numquam explicabo maxime debitis non nulla error,
+                  eligendi consequuntur unde veritatis laboriosam molestias quod
+                  officia voluptatem officiis distinctio eaque voluptatibus.
+                </p>
+                <p className="mb-10">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
+                  iste numquam explicabo maxime debitis non nulla error,
+                  eligendi consequuntur unde veritatis laboriosam molestias quod
+                  officia voluptatem officiis distinctio eaque voluptatibus.
+                </p>
               </div>
             </div>
           </div>
         </section>
-        <section className="py-10">
+
+        {/* Weekly Services */}
+        <section className="py-20">
+          <h2 className="font-semibold text-3xl text-center mb-10 text-tertiary">
+            Our Weekly Services
+          </h2>
+          <div className="container grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
+              <h3 className="font-semibold text-lg mb-3">Sunday Service</h3>
+              <h5 className="font-light">7:30AM - 9:00AM</h5>
+              <h5 className="font-light">9:30AM - 12:00PM</h5>
+            </div>
+            <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
+              <h3 className="font-semibold text-lg mb-3">Sunday Service</h3>
+              <h5 className="font-light">7:30AM - 9:00AM</h5>
+              <h5 className="font-light">9:30AM - 12:00PM</h5>
+            </div>
+            <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
+              <h3 className="font-semibold text-lg mb-3">Sunday Service</h3>
+              <h5 className="font-light">7:30AM - 9:00AM</h5>
+              <h5 className="font-light">9:30AM - 12:00PM</h5>
+            </div>
+            <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
+              <h3 className="font-semibold text-lg mb-3">Sunday Service</h3>
+              <h5 className="font-light">7:30AM - 9:00AM</h5>
+              <h5 className="font-light">9:30AM - 12:00PM</h5>
+            </div>
+          </div>
+        </section>
+
+        {/*  Watch Us Online */}
+        <section className="py-10 bg-slate-300">
           <div className="container">
             <h2 className="font-semibold text-3xl text-center mb-10">
-              Wactch Us Online
+              Watch Us Online
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <iframe
@@ -118,6 +194,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Follow Us On Social Media */}
         <section className="py-20 font-semibold text-3xl text-center bg-gradient-to-b md:bg-gradient-to-r from-primary/90 to-tertiary/90 text-white">
           <div className="container">
             <h2 className="font-semibold mb-10 text-secondary text-3xl text-center">
@@ -175,40 +253,95 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section className="py-10 bg-slate-300">
-          <div className="container">
-            <h2 className="font-semibold text-3xl text-center mb-10">
-              Our Weekly Services
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-              <div className="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem ipsam adipisci rem quisquam excepturi odit earum
-                quis architecto inventore nemo ducimus velit harum, perferendis
-                quaerat reprehenderit explicabo aspernatur officia aperiam.
+
+        {/* Get In Touch */}
+        <section className="py-10">
+          {/* <div className="container grid grid-cols-1 md:grid-cols-2 gap-10"> */}
+          <div className="mx-auto w-4/6">
+            {/* <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
+              <h3 className="font-semibold text-lg mb-3">Sunday Service</h3>
+              <h5 className="font-light">7:30AM - 9:00AM</h5>
+              <h5 className="font-light">9:30AM - 12:00PM</h5>
+            </div> */}
+            <div className="shadow-xl p-10 rounded-md">
+              <div className="mb-10">
+                <h2 className="font-semibold text-3xl text-center text-tertiary">
+                  Get In Touch
+                </h2>
+                <p className="text-center mb-3">
+                  Send us a message, we will get back in touch with you in less
+                  than 24 hours
+                </p>
               </div>
-              <div className="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem ipsam adipisci rem quisquam excepturi odit earum
-                quis architecto inventore nemo ducimus velit harum, perferendis
-                quaerat reprehenderit explicabo aspernatur officia aperiam.
-              </div>
-              <div className="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem ipsam adipisci rem quisquam excepturi odit earum
-                quis architecto inventore nemo ducimus velit harum, perferendis
-                quaerat reprehenderit explicabo aspernatur officia aperiam.
-              </div>
-              <div className="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem ipsam adipisci rem quisquam excepturi odit earum
-                quis architecto inventore nemo ducimus velit harum, perferendis
-                quaerat reprehenderit explicabo aspernatur officia aperiam.
-              </div>
+              {/* <h2 className="font-semibold text-xl text-center mb-3 text-tertiary">
+                Fill In the Form
+              </h2>
+              <p className="text-center mb-3">
+                Send us a message, we will get back in touch with you in less
+                than 24 hours
+              </p> */}
+              <form>
+                <div className="mb-3">
+                  <label htmlFor={'name'} className="block">
+                    <span className="block text-sm font-semibold text-slate-700">
+                      Your Name *
+                    </span>
+                  </label>
+
+                  <input
+                    type={'text'}
+                    id={'name'}
+                    name={'name'}
+                    onChange={() => 'hello'}
+                    placeholder={'Name'}
+                    className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-primary"
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor={'email'} className="block">
+                    <span className="block text-sm font-semibold text-slate-700">
+                      Your Email *
+                    </span>
+                  </label>
+
+                  <input
+                    type={'email'}
+                    id={'email'}
+                    name={'email'}
+                    onChange={() => 'hello'}
+                    placeholder={'Email'}
+                    className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-primary"
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor={'message'} className="block">
+                    <span className="block text-sm font-semibold text-slate-700">
+                      Your message *
+                    </span>
+                  </label>
+
+                  <textarea
+                    name="message"
+                    id=""
+                    cols={30}
+                    rows={10}
+                    className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-primary"
+                  ></textarea>
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="submit"
+                    value={'Send your message'}
+                    className="bg-gradient-to-b md:bg-gradient-to-r from-primary to-tertiary text-white text-xl p-3 rounded-md w-full text-center cursor-pointer hover:bg-tertiary"
+                  />
+                </div>
+              </form>
             </div>
           </div>
         </section>
       </main>
     </>
-  );
+  )
 }
