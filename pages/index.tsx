@@ -9,6 +9,9 @@ import {
   FaTiktok,
   FaLinkedin,
 } from 'react-icons/fa'
+import { GrLocation } from 'react-icons/gr'
+import { BsTelephoneFill } from 'react-icons/bs'
+import { BiTime } from 'react-icons/bi'
 import congregationPic from '../public/john-price-RAZQiZOX3mU-unsplash.jpg'
 import pastorPic from '../public/melyna-valle-3yiSaxd-V6Q-unsplash.jpg'
 
@@ -130,24 +133,56 @@ export default function Home() {
           </h2>
           <div className="container grid grid-cols-1 md:grid-cols-4 gap-10">
             <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
-              <h3 className="font-semibold text-lg mb-3">Sunday Service</h3>
-              <h5 className="font-light">7:30AM - 9:00AM</h5>
-              <h5 className="font-light">9:30AM - 12:00PM</h5>
+              <h3 className="font-semibold text-lg text-center text-primary mb-3">
+                Sunday Service
+              </h3>
+              <div className="flex justify-center items-center mb-2">
+                <BiTime className="mr-1" />
+                <h5 className="ml-1 font-light">7:30AM - 9:00AM</h5>
+              </div>
+              <div className="flex justify-center items-center">
+                <BiTime className="mr-1" />
+                <h5 className="ml-1 font-light">9:30AM - 12:00PM</h5>
+              </div>
             </div>
             <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
-              <h3 className="font-semibold text-lg mb-3">Sunday Service</h3>
-              <h5 className="font-light">7:30AM - 9:00AM</h5>
-              <h5 className="font-light">9:30AM - 12:00PM</h5>
+              <h3 className="font-semibold text-lg text-center text-primary mb-3">
+                Monday Service
+              </h3>
+              <div className="flex justify-center items-center mb-2">
+                <BiTime className="mr-1" />
+                <h5 className="ml-1 font-light">7:30AM - 9:00AM</h5>
+              </div>
+              <div className="flex justify-center items-center">
+                <BiTime className="mr-1" />
+                <h5 className="ml-1 font-light">9:30AM - 12:00PM</h5>
+              </div>
             </div>
             <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
-              <h3 className="font-semibold text-lg mb-3">Sunday Service</h3>
-              <h5 className="font-light">7:30AM - 9:00AM</h5>
-              <h5 className="font-light">9:30AM - 12:00PM</h5>
+              <h3 className="font-semibold text-lg text-center text-primary mb-3">
+                Tuesday Service
+              </h3>
+              <div className="flex justify-center items-center mb-2">
+                <BiTime className="mr-1" />
+                <h5 className="ml-1 font-light">7:30AM - 9:00AM</h5>
+              </div>
+              <div className="flex justify-center items-center">
+                <BiTime className="mr-1" />
+                <h5 className="ml-1 font-light">9:30AM - 12:00PM</h5>
+              </div>
             </div>
             <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
-              <h3 className="font-semibold text-lg mb-3">Sunday Service</h3>
-              <h5 className="font-light">7:30AM - 9:00AM</h5>
-              <h5 className="font-light">9:30AM - 12:00PM</h5>
+              <h3 className="font-semibold text-lg text-center text-primary mb-3">
+                Mid-Week Service
+              </h3>
+              <div className="flex justify-center items-center mb-2">
+                <BiTime className="mr-1" />
+                <h5 className="ml-1 font-light">7:30AM - 9:00AM</h5>
+              </div>
+              <div className="flex justify-center items-center">
+                <BiTime className="mr-1" />
+                <h5 className="ml-1 font-light">9:30AM - 12:00PM</h5>
+              </div>
             </div>
           </div>
         </section>
@@ -338,7 +373,7 @@ export default function Home() {
                   <input
                     type="submit"
                     value={'Send your message'}
-                    className="bg-gradient-to-b md:bg-gradient-to-r from-primary to-tertiary text-white text-xl p-3 rounded-md w-full text-center cursor-pointer hover:bg-tertiary"
+                    className="bg-gradient-to-r from-primary to-tertiary text-white text-xl p-3 rounded-md w-full text-center cursor-pointer hover:bg-tertiary"
                   />
                 </div>
               </form>
