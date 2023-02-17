@@ -256,30 +256,34 @@ export default function Home() {
 
         {/* Get In Touch */}
         <section className="py-10">
-          {/* <div className="container grid grid-cols-1 md:grid-cols-2 gap-10"> */}
-          <div className="mx-auto w-4/6">
-            {/* <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
-              <h3 className="font-semibold text-lg mb-3">Sunday Service</h3>
-              <h5 className="font-light">7:30AM - 9:00AM</h5>
-              <h5 className="font-light">9:30AM - 12:00PM</h5>
-            </div> */}
-            <div className="shadow-xl p-10 rounded-md">
-              <div className="mb-10">
-                <h2 className="font-semibold text-3xl text-center text-tertiary">
-                  Get In Touch
-                </h2>
-                <p className="text-center mb-3">
-                  Send us a message, we will get back in touch with you in less
-                  than 24 hours
-                </p>
-              </div>
-              {/* <h2 className="font-semibold text-xl text-center mb-3 text-tertiary">
-                Fill In the Form
+          <div className="container grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="">
+              <h2 className="font-bold text-4xl text-tertiary mb-3">
+                Talk to us
               </h2>
-              <p className="text-center mb-3">
-                Send us a message, we will get back in touch with you in less
-                than 24 hours
-              </p> */}
+              <p className="mb-5">
+                Have questions about services, events and church? Fill out the
+                form and we will be in touch directly.
+              </p>
+
+              <h3 className="font-bold text-2xl text-tertiary mb-3">
+                Our Location
+              </h3>
+              <Image
+                src={congregationPic}
+                alt="congregation"
+                className="w-full rounded-md mb-3"
+              />
+              <div className="flex flex items-center mb-3">
+                <GrLocation className="mr-2" />
+                <h5 className="ml-2">Accra, Ghana</h5>
+              </div>
+              <div className="flex flex items-center">
+                <BsTelephoneFill className="mr-2" />
+                <h5 className="ml-2">+233548723096</h5>
+              </div>
+            </div>
+            <div className="shadow-xl p-5">
               <form>
                 <div className="mb-3">
                   <label htmlFor={'name'} className="block">
