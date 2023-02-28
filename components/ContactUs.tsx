@@ -28,6 +28,7 @@ const ContactUs = () => {
           <a
             href="tel:+233548723096"
             target={'_blank'}
+            rel="noreferrer"
             className="ml-2 hover:text-tertiary"
           >
             +233548723096
