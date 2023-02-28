@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
@@ -9,12 +8,11 @@ import {
   FaTiktok,
   FaLinkedin,
 } from 'react-icons/fa'
-import { GrLocation } from 'react-icons/gr'
-import { BsTelephoneFill } from 'react-icons/bs'
 import { BiTime } from 'react-icons/bi'
 import congregationPic from '../public/john-price-RAZQiZOX3mU-unsplash.jpg'
 import pastorPic from '../public/melyna-valle-3yiSaxd-V6Q-unsplash.jpg'
 import Layout from '@/components/Layout'
+import ContactUs from '@/components/ContactUs'
 
 export default function Home() {
   return (
@@ -38,7 +36,7 @@ export default function Home() {
                 </p>
                 <Link
                   href={'#'}
-                  className="px-10 py-5 bg-secondary text-gray-900 rounded-md shadow-2xl"
+                  className="px-10 py-5 bg-old-secondary text-gray-900 font-bold hover:bg-gradient-to-r from-other to-light rounded-md shadow-2xl"
                 >
                   Church With Us
                 </Link>
@@ -48,14 +46,14 @@ export default function Home() {
         </section>
 
         {/* About Us */}
-        <section className="py-10 bg-slate-300">
+        <section className="py-10 bg-light">
           <div className="container">
             <div className="mb-10">
               <h2 className="font-semibold text-3xl text-center mb-10">
                 About Us
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
-                <Image src={pastorPic} alt="pastorPic" />
+                <Image src={pastorPic} alt="pastorPic" className="shadow-2xl" />
                 <div>
                   <p className="mb-3">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -73,7 +71,7 @@ export default function Home() {
                   </p>
                   <Link
                     href={'#'}
-                    className="px-5 py-3 bg-tertiary rounded-md text-white"
+                    className="px-5 py-3 bg-tertiary rounded-md text-white hover:bg-gradient-to-r from-primary to-secondary"
                   >
                     Learn More
                   </Link>
@@ -183,7 +181,7 @@ export default function Home() {
         </section>
 
         {/*  Watch Us Online */}
-        {/* <section className="py-10 bg-slate-300">
+        {/* <section className="py-10 bg-light">
           <div className="container">
             <h2 className="font-semibold text-3xl text-center mb-10">
               Watch Us Online
@@ -228,7 +226,7 @@ export default function Home() {
         {/* Follow Us On Social Media */}
         <section className="py-20 font-semibold text-3xl text-center bg-gradient-to-b md:bg-gradient-to-r from-primary/90 to-tertiary/90 text-white">
           <div className="container">
-            <h2 className="font-semibold mb-10 text-secondary text-3xl text-center">
+            <h2 className="font-semibold mb-10 text-old-secondary text-3xl text-center">
               Follow Us On Social Media
             </h2>
           </div>
@@ -237,7 +235,7 @@ export default function Home() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-2 hover:text-secondary"
+              className="px-2 hover:text-old-secondary"
             >
               <FaFacebookSquare />
             </a>
@@ -245,7 +243,7 @@ export default function Home() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-2 hover:text-secondary"
+              className="px-2 hover:text-old-secondary"
             >
               <FaYoutube />
             </a>
@@ -253,7 +251,7 @@ export default function Home() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-2 hover:text-secondary"
+              className="px-2 hover:text-old-secondary"
             >
               <FaInstagram />
             </a>
@@ -261,7 +259,7 @@ export default function Home() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-2 hover:text-secondary"
+              className="px-2 hover:text-old-secondary"
             >
               <FaTwitter />
             </a>
@@ -269,7 +267,7 @@ export default function Home() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-2 hover:text-secondary"
+              className="px-2 hover:text-old-secondary"
             >
               <FaTiktok />
             </a>
@@ -277,7 +275,7 @@ export default function Home() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-2 hover:text-secondary"
+              className="px-2 hover:text-old-secondary"
             >
               <FaLinkedin />
             </a>
@@ -286,94 +284,7 @@ export default function Home() {
 
         {/* Get In Touch */}
         <section className="py-10">
-          <div className="container grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div className="">
-              <h2 className="font-bold text-4xl text-tertiary mb-3">
-                Talk to us
-              </h2>
-              <p className="mb-5">
-                Have questions about services, events and church? Fill out the
-                form and we will be in touch directly.
-              </p>
-
-              <h3 className="font-bold text-2xl text-tertiary mb-3">
-                Our Location
-              </h3>
-              <Image
-                src={congregationPic}
-                alt="congregation"
-                className="w-full rounded-md mb-3"
-              />
-              <div className="flex items-center mb-3">
-                <GrLocation className="mr-2" />
-                <h5 className="ml-2">Accra, Ghana</h5>
-              </div>
-              <div className="flex items-center">
-                <BsTelephoneFill className="mr-2" />
-                <h5 className="ml-2">+233548723096</h5>
-              </div>
-            </div>
-            <div className="shadow-xl rounded-md p-5">
-              <form>
-                <div className="mb-3">
-                  <label htmlFor={'name'} className="block">
-                    <span className="block text-sm font-semibold text-slate-700">
-                      Your Name *
-                    </span>
-                  </label>
-
-                  <input
-                    type={'text'}
-                    id={'name'}
-                    name={'name'}
-                    onChange={() => 'hello'}
-                    placeholder={'Name'}
-                    className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-primary"
-                    required
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor={'email'} className="block">
-                    <span className="block text-sm font-semibold text-slate-700">
-                      Your Email *
-                    </span>
-                  </label>
-
-                  <input
-                    type={'email'}
-                    id={'email'}
-                    name={'email'}
-                    onChange={() => 'hello'}
-                    placeholder={'Email'}
-                    className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-primary"
-                    required
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor={'message'} className="block">
-                    <span className="block text-sm font-semibold text-slate-700">
-                      Your message *
-                    </span>
-                  </label>
-
-                  <textarea
-                    name="message"
-                    id=""
-                    cols={30}
-                    rows={10}
-                    className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-primary"
-                  ></textarea>
-                </div>
-                <div className="mt-10 mb-3">
-                  <input
-                    type="submit"
-                    value={'Send your message'}
-                    className="bg-gradient-to-r from-primary to-tertiary text-white text-xl p-3 rounded-md w-full text-center cursor-pointer hover:bg-tertiary"
-                  />
-                </div>
-              </form>
-            </div>
-          </div>
+          <ContactUs />
         </section>
       </main>
     </Layout>
