@@ -1,5 +1,7 @@
-import Link from 'next/link'
 import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import newLifeMinistriesLogo from '../public/newlifeministries-logo.png'
 
 export default function Navbar() {
   const origin =
@@ -21,7 +23,13 @@ export default function Navbar() {
             href={`${origin}`}
             className="flex items-center font-bold text-white"
           >
-            New Life Ministries Amsterdam
+            {/* New Life Ministries Amsterdam */}
+            <Image
+              src={newLifeMinistriesLogo}
+              alt="newLifeMinistriesLogo"
+              height={100}
+              width={100}
+            />
           </Link>
           <button
             className="inline-flex p-3 hover:bg-secondary rounded lg:hidden text-white ml-auto hover:text-white outline-none"
