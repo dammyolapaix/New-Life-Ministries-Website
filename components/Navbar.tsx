@@ -64,7 +64,7 @@ export default function Navbar() {
                 Home
               </Link>
               <Link
-                href={`#`}
+                href={`${origin}/about`}
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-secondary"
               >
                 About
