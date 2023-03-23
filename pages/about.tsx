@@ -21,7 +21,7 @@ const AboutPage = () => {
             These are the servants of Christ who have dedicated their lives to
             the Gospel of our Lord Jesus Christ.
           </p>
-          <div className="grid grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
               <Link href={'#'}>
                 <Image
