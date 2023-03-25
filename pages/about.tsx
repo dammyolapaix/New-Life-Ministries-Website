@@ -1,7 +1,4 @@
-import Image from 'next/image'
 import Layout from '@/components/Layout'
-import pastorPic from '../public/melyna-valle-3yiSaxd-V6Q-unsplash.jpg'
-import Link from 'next/link'
 import { Pastors } from '@/components'
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import { IPastorsRes } from '@/interfaces'
