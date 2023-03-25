@@ -1,3 +1,3 @@
-import { getEvents } from './event.services'
+import { getEvents, getSingleEvent } from './event.services'
 
-export { getEvents }
+export { getEvents, getSingleEvent }
