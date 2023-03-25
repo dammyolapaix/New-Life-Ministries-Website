@@ -31,8 +31,6 @@ export const getStaticProps: GetStaticProps<{
 }> = async () => {
   const eventsRes: IEventsRes = await getEvents()
 
-  console.log(eventsRes)
-
   if (!eventsRes) {
     return {
       notFound: true,
