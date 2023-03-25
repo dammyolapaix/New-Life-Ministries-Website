@@ -2,8 +2,14 @@ import Image from 'next/image'
 import Layout from '@/components/Layout'
 import pastorPic from '../public/melyna-valle-3yiSaxd-V6Q-unsplash.jpg'
 import Link from 'next/link'
+import { Pastors } from '@/components'
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import { IPastorsRes } from '@/interfaces'
+import { getPastors } from '@/services'
 
-const AboutPage = () => {
+const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  pastorsRes,
+}) => {
   return (
     <Layout>
       <header className="bg-gradient-to-b md:bg-gradient-to-r from-primary to-tertiary">
@@ -13,64 +19,29 @@ const AboutPage = () => {
       </header>
 
       <section className="py-20">
-        <div className="container">
-          <h2 className="font-semibold text-4xl text-primary mb-3">
-            Meet our pastors
-          </h2>
-          <p className="text-xl mb-5">
-            These are the servants of Christ who have dedicated their lives to
-            the Gospel of our Lord Jesus Christ.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div>
-              <Link href={'#'}>
-                <Image
-                  src={pastorPic}
-                  alt="pastorPic"
-                  className="shadow-2xl mb-3"
-                />
-                <h3 className="font-medium text-lg text-center">Pastor Name</h3>
-                <h4 className="text-center">Position</h4>
-              </Link>
-            </div>
-            <div>
-              <Link href={'#'}>
-                <Image
-                  src={pastorPic}
-                  alt="pastorPic"
-                  className="shadow-2xl mb-3"
-                />
-                <h3 className="font-medium text-lg text-center">Pastor Name</h3>
-                <h4 className="text-center">Position</h4>
-              </Link>
-            </div>
-            <div>
-              <Link href={'#'}>
-                <Image
-                  src={pastorPic}
-                  alt="pastorPic"
-                  className="shadow-2xl mb-3"
-                />
-                <h3 className="font-medium text-lg text-center">Pastor Name</h3>
-                <h4 className="text-center">Position</h4>
-              </Link>
-            </div>
-            <div>
-              <Link href={'#'}>
-                <Image
-                  src={pastorPic}
-                  alt="pastorPic"
-                  className="shadow-2xl mb-3"
-                />
-                <h3 className="font-medium text-lg text-center">Pastor Name</h3>
-                <h4 className="text-center">Position</h4>
-              </Link>
-            </div>
-          </div>
-        </div>
+        <Pastors pastors={pastorsRes.data} />
       </section>
     </Layout>
   )
+}
+
+export const getStaticProps: GetStaticProps<{
+  pastorsRes: IPastorsRes
+}> = async () => {
+  const pastorsRes: IPastorsRes = await getPastors()
+
+  if (!pastorsRes) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      pastorsRes,
+    },
+    revalidate: 1,
+  }
 }
 
 export default AboutPage
