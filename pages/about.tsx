@@ -1,11 +1,12 @@
 import Layout from '@/components/Layout'
-import { Pastors } from '@/components'
+import { Ministries, Pastors } from '@/components'
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
-import { IPastorsRes } from '@/interfaces'
-import { getPastors } from '@/services'
+import { IMinistriesRes, IPastorsRes } from '@/interfaces'
+import { getMinistries, getPastors } from '@/services'
 
 const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   pastorsRes,
+  ministriesRes,
 }) => {
   return (
     <Layout>
@@ -15,19 +16,25 @@ const AboutPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         </div>
       </header>
 
-      <section className="py-20">
+      <div className="my-20">
         <Pastors pastors={pastorsRes.data} />
-      </section>
+      </div>
+
+      <div className="my-20">
+        <Ministries ministries={ministriesRes.data} />
+      </div>
     </Layout>
   )
 }
 
 export const getStaticProps: GetStaticProps<{
   pastorsRes: IPastorsRes
+  ministriesRes: IMinistriesRes
 }> = async () => {
   const pastorsRes: IPastorsRes = await getPastors()
+  const ministriesRes: IMinistriesRes = await getMinistries()
 
-  if (!pastorsRes) {
+  if (!pastorsRes && !ministriesRes) {
     return {
       notFound: true,
     }
@@ -36,6 +43,7 @@ export const getStaticProps: GetStaticProps<{
   return {
     props: {
       pastorsRes,
+      ministriesRes,
     },
     revalidate: 1,
   }
