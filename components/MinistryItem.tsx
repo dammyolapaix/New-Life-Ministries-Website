@@ -2,7 +2,7 @@ import { IMinistry } from '@/interfaces'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { FC } from 'react'
-import pastorPic from '../public/melyna-valle-3yiSaxd-V6Q-unsplash.jpg'
+import defaultMinistryPic from '../public/john-price-RAZQiZOX3mU-unsplash.jpg'
 
 const MinistryItem: FC<{ ministry: IMinistry }> = ({ ministry }) => {
   return (
@@ -11,7 +11,7 @@ const MinistryItem: FC<{ ministry: IMinistry }> = ({ ministry }) => {
         src={
           ministry.attributes.image
             ? ministry.attributes.image.data.attributes.url
-            : pastorPic
+            : defaultMinistryPic
         }
         width={600}
         height={600}
