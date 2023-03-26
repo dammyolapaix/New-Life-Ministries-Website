@@ -11,6 +11,7 @@ import {
   IimageProviderMetadata,
   IimageSmall,
 } from './IImage'
+import { IMinistriesRes, IMinistry, IMinistryAttributes } from './IMinistry'
 
 export type {
   IEvent,
@@ -31,3 +32,5 @@ export type {
 }
 
 export type { IPastor, IPastorAttributes, IPastorsRes }
+
+export type { IMinistriesRes, IMinistry, IMinistryAttributes }
