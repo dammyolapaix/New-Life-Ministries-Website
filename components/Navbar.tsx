@@ -90,6 +90,7 @@ export default function Navbar() {
               <a
                 href="https://www.paypal.com/donate/?hosted_button_id=2KFVJUBEPRDN4"
                 target="_blank"
+                rel="noreferrer"
                 className="lg:inline-flex lg:w-auto w-full px-5 py-2 rounded-2xl text-primary items-center justify-center bg-old-secondary hover:bg-yellow-500 shadow-md hover:shadow-2xl"
               >
                 Donate
