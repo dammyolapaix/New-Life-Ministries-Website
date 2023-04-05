@@ -29,7 +29,7 @@ export default function Home() {
             <div className="flex justify-center items-center h-full">
               <div className="container text-white text-center">
                 <h1 className="font-bold text-4xl md:text-6xl mb-5">
-                  Welcome To New Life Ministries Amsterdam Website
+                  Experience the power of prayer and the Word of God at NLM
                 </h1>
                 <p className="text-2xl mb-10 font-light">
                   Join us today as we worship the Lord
@@ -56,21 +56,23 @@ export default function Home() {
                 <Image src={pastorPic} alt="pastorPic" className="shadow-2xl" />
                 <div>
                   <p className="mb-3">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Cum iste numquam explicabo maxime debitis non nulla error,
-                    eligendi consequuntur unde veritatis laboriosam molestias
-                    quod officia voluptatem officiis distinctio eaque
-                    voluptatibus.
+                    Come to NLM where people&apos;s destinies are changed, and a
+                    new life in Christ is experienced through the power of
+                    prayer and the Word of God. A place where Character is
+                    developed, Integrity restored, and Authority in Christ is
+                    maintained. NLM is a family-oriented church where people are
+                    genuinely cared for, loved, and cherished.
                   </p>
                   <p className="mb-10">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Cum iste numquam explicabo maxime debitis non nulla error,
-                    eligendi consequuntur unde veritatis laboriosam molestias
-                    quod officia voluptatem officiis distinctio eaque
-                    voluptatibus.
+                    We believe that man is a unique masterpiece of God&apos;s
+                    creation and possesses special God giving talents and
+                    giftings to be used to serve his generation. In NLM, we help
+                    people to identify, develop and execute these giftings and
+                    talents to the best of their God giving grace and ability. A
+                    place where the nobody&apos;s becomes somebody in Christ.
                   </p>
                   <Link
-                    href={'#'}
+                    href={'/about'}
                     className="px-5 py-3 bg-tertiary rounded-md text-white hover:bg-gradient-to-r from-primary to-secondary"
                   >
                     Learn More
@@ -84,16 +86,9 @@ export default function Home() {
               </h2>
               <div className="text-center">
                 <p className="mb-3">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
-                  iste numquam explicabo maxime debitis non nulla error,
-                  eligendi consequuntur unde veritatis laboriosam molestias quod
-                  officia voluptatem officiis distinctio eaque voluptatibus.
-                </p>
-                <p className="mb-10">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
-                  iste numquam explicabo maxime debitis non nulla error,
-                  eligendi consequuntur unde veritatis laboriosam molestias quod
-                  officia voluptatem officiis distinctio eaque voluptatibus.
+                  At NLM, we&apos;re dedicated to helping people transform their
+                  lives through prayer, the Word of God, and service to their
+                  community
                 </p>
               </div>
             </div>
@@ -103,16 +98,10 @@ export default function Home() {
               </h2>
               <div className="text-center">
                 <p className="mb-3">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
-                  iste numquam explicabo maxime debitis non nulla error,
-                  eligendi consequuntur unde veritatis laboriosam molestias quod
-                  officia voluptatem officiis distinctio eaque voluptatibus.
-                </p>
-                <p className="mb-10">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
-                  iste numquam explicabo maxime debitis non nulla error,
-                  eligendi consequuntur unde veritatis laboriosam molestias quod
-                  officia voluptatem officiis distinctio eaque voluptatibus.
+                  Our vision is to help every member of our community identify,
+                  develop, and execute these talents to the best of their
+                  ability so that we can make a positive impact on the world
+                  around us.
                 </p>
               </div>
             </div>
@@ -179,49 +168,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/*  Watch Us Online */}
-        {/* <section className="py-10 bg-light">
-          <div className="container">
-            <h2 className="font-semibold text-3xl text-center mb-10">
-              Watch Us Online
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <iframe
-                className="w-full"
-                height="315"
-                src="https://www.youtube.com/embed/DRCoraISqmE"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/DRCoraISqmE"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/DRCoraISqmE"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/DRCoraISqmE"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </section> */}
 
         {/* Follow Us On Social Media */}
         <section className="py-20 font-semibold text-3xl text-center bg-gradient-to-b md:bg-gradient-to-r from-primary/90 to-tertiary/90 text-white">
