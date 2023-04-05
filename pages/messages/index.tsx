@@ -3,8 +3,6 @@ import Layout from '@/components/Layout'
 import { IMessagesRes } from '@/interfaces'
 import { getMessages } from '@/services'
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
-import Link from 'next/link'
-import { AiOutlineYoutube } from 'react-icons/ai'
 
 const MessagesPage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
