@@ -10,3 +10,7 @@
   background: #0000 url('/john-price-RAZQiZOX3mU-unsplash.jpg') no-repeat
     center/cover fixed;
 }
+
+body {
+  background: #eee;
+}

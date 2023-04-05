@@ -76,6 +76,12 @@ export default function Navbar() {
                 Events
               </Link>
               <Link
+                href={`${origin}/messages`}
+                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-secondary"
+              >
+                Messages
+              </Link>
+              <Link
                 href={`${origin}/contact`}
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-secondary"
               >
