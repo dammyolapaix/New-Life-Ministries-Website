@@ -29,7 +29,8 @@ export default function Home() {
             <div className="flex justify-center items-center h-full">
               <div className="container text-white text-center">
                 <h1 className="font-bold text-4xl md:text-6xl mb-5">
-                  Experience the power of prayer and the Word of God at NLM
+                  Building great people with Character, Integrity, and
+                  Authority.
                 </h1>
                 <p className="text-2xl mb-10 font-light">
                   Join us today as we worship the Lord
