@@ -35,7 +35,7 @@ const ContactUs = () => {
           </a>
         </div>
       </div>
-      <div className="shadow-xl rounded-md p-5">
+      <div className="bg-white shadow-xl rounded-md px-5 py-10 h-fit">
         <form>
           <div className="mb-3">
             <label htmlFor={'name'} className="block">
@@ -86,7 +86,7 @@ const ContactUs = () => {
               className="mt-1 block w-full px-3 py-2 bg-white border border-light rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-primary"
             ></textarea>
           </div>
-          <div className="mt-10 mb-3">
+          <div className="mt-10">
             <input
               type="submit"
               value={'Send your message'}
