@@ -13,6 +13,8 @@ import congregationPic from '../public/john-price-RAZQiZOX3mU-unsplash.jpg'
 import pastorPic from '../public/melyna-valle-3yiSaxd-V6Q-unsplash.jpg'
 import Layout from '@/components/Layout'
 import ContactUs from '@/components/ContactUs'
+import { MdOutlineToday } from 'react-icons/md'
+import { CiLocationOn } from 'react-icons/ci'
 
 export default function Home() {
   return (
@@ -112,60 +114,82 @@ export default function Home() {
         {/* Weekly Services */}
         <section className="py-20">
           <h2 className="font-semibold text-3xl text-center mb-10 text-tertiary">
-            Our Weekly Services
+            Our Weekly Activities
           </h2>
+          {/* 
+              Name of actvity
+              time
+              venue
+              Day(s) of the week
+               */}
           <div className="container grid grid-cols-1 md:grid-cols-4 gap-10">
-            <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
+            <div className="bg-white shadow-xl hover:shadow-2xl p-3 rounded-md">
               <h3 className="font-semibold text-lg text-center text-primary mb-3">
-                Sunday Service
+                Sunday Worship Service
               </h3>
-              <div className="flex justify-center items-center mb-2">
-                <BiTime className="mr-1" />
-                <h5 className="ml-1 font-light">7:30AM - 9:00AM</h5>
+              <div className="flex items-center">
+                <BiTime className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">12:30 - 15:00</h5>
               </div>
-              <div className="flex justify-center items-center">
-                <BiTime className="mr-1" />
-                <h5 className="ml-1 font-light">9:30AM - 12:00PM</h5>
+              <div className="flex items-center">
+                <MdOutlineToday className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">Sundays</h5>
+              </div>
+              <div className="flex items-center">
+                <CiLocationOn className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">Tt Vasumweg 4b</h5>
               </div>
             </div>
-            <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
+            <div className="bg-white shadow-xl hover:shadow-2xl p-3 rounded-md">
               <h3 className="font-semibold text-lg text-center text-primary mb-3">
-                Monday Service
+                Intercession Prayers
               </h3>
-              <div className="flex justify-center items-center mb-2">
-                <BiTime className="mr-1" />
-                <h5 className="ml-1 font-light">7:30AM - 9:00AM</h5>
+              <div className="flex items-center">
+                <BiTime className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">20:00 - 21:00</h5>
               </div>
-              <div className="flex justify-center items-center">
-                <BiTime className="mr-1" />
-                <h5 className="ml-1 font-light">9:30AM - 12:00PM</h5>
+              <div className="flex items-center">
+                <MdOutlineToday className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">Tuesdays and Thursdays</h5>
+              </div>
+              <div className="flex items-center">
+                <CiLocationOn className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">Online</h5>
               </div>
             </div>
-            <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
+            <div className="bg-white shadow-xl hover:shadow-2xl p-3 rounded-md">
               <h3 className="font-semibold text-lg text-center text-primary mb-3">
-                Tuesday Service
+                Virtual Bible Study
               </h3>
-              <div className="flex justify-center items-center mb-2">
-                <BiTime className="mr-1" />
-                <h5 className="ml-1 font-light">7:30AM - 9:00AM</h5>
+              <div className="flex items-center">
+                <BiTime className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">20:00 - 21:00</h5>
               </div>
-              <div className="flex justify-center items-center">
-                <BiTime className="mr-1" />
-                <h5 className="ml-1 font-light">9:30AM - 12:00PM</h5>
+              <div className="flex items-center">
+                <MdOutlineToday className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">Wednesdays</h5>
+              </div>
+              <div className="flex items-center">
+                <CiLocationOn className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">Online</h5>
               </div>
             </div>
-            <div className="shadow-xl hover:shadow-2xl p-3 rounded-md">
+            <div className="bg-white shadow-xl hover:shadow-2xl p-3 rounded-md">
               <h3 className="font-semibold text-lg text-center text-primary mb-3">
-                Mid-Week Service
+                Friday Prayers
               </h3>
-              <div className="flex justify-center items-center mb-2">
-                <BiTime className="mr-1" />
-                <h5 className="ml-1 font-light">7:30AM - 9:00AM</h5>
+              <div className="flex items-center">
+                <BiTime className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">19:30 - 21:00</h5>
               </div>
-              <div className="flex justify-center items-center">
-                <BiTime className="mr-1" />
-                <h5 className="ml-1 font-light">9:30AM - 12:00PM</h5>
+              <div className="flex items-center">
+                <MdOutlineToday className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">Fridays</h5>
               </div>
+              {/* <div className="flex items-center">
+                <CiLocationOn className="mr-1 text-secondary" />
+                <h5 className="ml-1 font-light">Online</h5>
+              </div> */}
             </div>
           </div>
         </section>
