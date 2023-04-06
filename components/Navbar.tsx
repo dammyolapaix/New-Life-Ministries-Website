@@ -17,22 +17,19 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-gradient-to-r from-primary to-tertiary shadow-2xl fixed top-0 z-50 w-full p-3">
+      <nav className="bg-light text-tertiary shadow-2xl fixed top-0 z-50 w-full p-3">
         <div className="container flex items-center flex-wrap">
-          <Link
-            href={`${origin}`}
-            className="flex items-center font-bold text-white"
-          >
+          <Link href={`${origin}`}>
             {/* New Life Ministries Amsterdam */}
             <Image
               src={newLifeMinistriesLogo}
               alt="newLifeMinistriesLogo"
-              height={100}
-              width={100}
+              height={115}
+              width={115}
             />
           </Link>
           <button
-            className="inline-flex p-3 hover:bg-secondary rounded lg:hidden text-white ml-auto hover:text-white outline-none"
+            className="inline-flex p-3 hover:bg-secondary rounded lg:hidden text-primary ml-auto hover:text-white outline-none"
             onClick={handleClick}
           >
             <svg
@@ -59,31 +56,31 @@ export default function Navbar() {
             <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
               <Link
                 href={`${origin}`}
-                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-secondary"
+                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:border-b-2 hover:border-primary"
               >
                 Home
               </Link>
               <Link
                 href={`${origin}/about`}
-                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-secondary"
+                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:border-b-2 hover:border-primary"
               >
                 About
               </Link>
               <Link
                 href={`${origin}/events`}
-                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-secondary"
+                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:border-b-2 hover:border-primary"
               >
                 Events
               </Link>
               <Link
                 href={`${origin}/messages`}
-                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-secondary"
+                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:border-b-2 hover:border-primary"
               >
                 Messages
               </Link>
               <Link
                 href={`${origin}/contact`}
-                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white items-center justify-center hover:bg-secondary"
+                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:border-b-2 hover:border-primary"
               >
                 Contact Us
               </Link>
@@ -91,7 +88,7 @@ export default function Navbar() {
                 href="https://www.paypal.com/donate/?hosted_button_id=2KFVJUBEPRDN4"
                 target="_blank"
                 rel="noreferrer"
-                className="lg:inline-flex lg:w-auto w-full px-5 py-2 rounded-2xl text-primary items-center justify-center bg-old-secondary hover:bg-yellow-500 shadow-md hover:shadow-2xl"
+                className="lg:inline-flex lg:w-auto w-full px-5 py-2 rounded-2xl text-primary text-center items-center justify-center bg-old-secondary hover:bg-tertiary hover:text-white shadow-md hover:shadow-2xl"
               >
                 Donate
               </a>
