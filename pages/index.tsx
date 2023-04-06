@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fa'
 import { BiTime } from 'react-icons/bi'
 import congregationPic from '../public/john-price-RAZQiZOX3mU-unsplash.jpg'
-import pastorPic from '../public/melyna-valle-3yiSaxd-V6Q-unsplash.jpg'
+import pastorPic from '../public/Rev-Kingsley-Kusi-Head-Pastor.jpeg'
 import Layout from '@/components/Layout'
 import ContactUs from '@/components/ContactUs'
 import { MdOutlineToday } from 'react-icons/md'
@@ -56,7 +56,13 @@ export default function Home() {
                 About Us
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
-                <Image src={pastorPic} alt="pastorPic" className="shadow-2xl" />
+                <Image
+                  src={pastorPic}
+                  alt="pastorPic"
+                  className="shadow-2xl mx-auto"
+                  // width={400}
+                  height={600}
+                />
                 <div>
                   <p className="mb-3">
                     Come to NLM where people&apos;s destinies are changed, and a
