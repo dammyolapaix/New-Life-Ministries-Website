@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { GoLocation } from 'react-icons/go'
 import { BsTelephoneFill } from 'react-icons/bs'
 import congregationPic from '../public/john-price-RAZQiZOX3mU-unsplash.jpg'
+import { MdOutlineMailOutline } from 'react-icons/md'
 
 const ContactUs = () => {
   return (
@@ -21,9 +22,20 @@ const ContactUs = () => {
         />
         <div className="flex items-center mb-3">
           <GoLocation className="mr-2 text-tertiary" />
-          <h5 className="ml-2">Accra, Ghana</h5>
+          <h5 className="ml-2">Tt vasumweg 4B 1033 SC Amsterdam</h5>
         </div>
         <div className="flex items-center">
+          <MdOutlineMailOutline className="mr-2 text-tertiary" />
+          <a
+            href="mailto:newlifeministriesamsterdam@gmail.com"
+            target={'_blank'}
+            rel="noreferrer"
+            className="ml-2 hover:text-tertiary"
+          >
+            newlifeministriesamsterdam@gmail.com
+          </a>
+        </div>
+        {/* <div className="flex items-center">
           <BsTelephoneFill className="mr-2 text-tertiary" />
           <a
             href="tel:+233548723096"
@@ -33,7 +45,7 @@ const ContactUs = () => {
           >
             +233548723096
           </a>
-        </div>
+        </div> */}
       </div>
       <div className="bg-white shadow-xl rounded-md px-5 py-10 h-fit">
         <form>

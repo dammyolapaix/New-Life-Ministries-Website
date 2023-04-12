@@ -38,7 +38,7 @@ export default function Home() {
                   Join us today as we worship the Lord
                 </p>
                 <Link
-                  href={'#'}
+                  href={'/#services'}
                   className="px-10 py-5 bg-old-secondary text-gray-900 font-bold hover:bg-gradient-to-r from-other to-light rounded-md shadow-2xl"
                 >
                   Church With Us
@@ -118,7 +118,7 @@ export default function Home() {
         </section>
 
         {/* Weekly Services */}
-        <section className="py-20">
+        <section id="services" className="py-20">
           <h2 className="font-semibold text-3xl text-center mb-10 text-tertiary">
             Our Weekly Activities
           </h2>
