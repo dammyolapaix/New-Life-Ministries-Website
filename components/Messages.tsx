@@ -1,12 +1,22 @@
 import { IMessagesRes } from '@/interfaces'
-import Link from 'next/link'
+// import Link from 'next/link'
 import React, { FC } from 'react'
-import { AiOutlineYoutube } from 'react-icons/ai'
+// import { AiOutlineYoutube } from 'react-icons/ai'
 
 const Messages: FC<{ messagesRes: IMessagesRes }> = ({ messagesRes }) => {
   return (
     <section className="py-20">
-      <div className="container grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="container flex justify-center items-center">
+        <iframe
+          // height="560"
+          src={`https://www.youtube.com/embed/${messagesRes.data[0].attributes.youtubeId}`}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="w-full h-52 md:h-96 lg:h-[32rem] lg:w-3/5 mx-auto"
+        ></iframe>
+      </div>
+      {/* <div className="container grid grid-cols-1 md:grid-cols-4 gap-10">
         {messagesRes.data.map((message) => (
           <Link
             href={`/messages/${message.attributes.youtubeId}`}
@@ -18,7 +28,7 @@ const Messages: FC<{ messagesRes: IMessagesRes }> = ({ messagesRes }) => {
             </div>
           </Link>
         ))}
-      </div>
+      </div> */}
     </section>
   )
 }
