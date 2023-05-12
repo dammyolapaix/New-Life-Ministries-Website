@@ -14,7 +14,13 @@ const EventItem: FC<{ event: IEvent }> = ({ event }) => {
         <div className="bg-white flex shadow-xl hover:shadow-2xl p-3 rounded-2xl">
           <div className="w-2/5 mr-2">
             <Image
-              src={congregationPic}
+              src={
+                event.attributes.image && event.attributes.image.data !== null
+                  ? event.attributes.image.data.attributes.url
+                  : congregationPic
+              }
+              width={300}
+              height={300}
               alt="congregation"
               className="w-full h-full rounded-2xl"
             />

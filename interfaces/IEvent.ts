@@ -1,4 +1,4 @@
-import { IMeta } from './index'
+import { IImage, IMeta } from './index'
 
 export interface IEventsRes {
   data: IEvent[]
@@ -20,4 +20,5 @@ export interface IEventAttributes {
   createdAt: Date
   updatedAt: Date
   publishedAt: Date
+  image?: IImage
 }
