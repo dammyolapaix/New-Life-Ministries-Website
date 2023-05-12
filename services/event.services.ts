@@ -2,13 +2,15 @@ import { IEventsRes } from '@/interfaces'
 import { makeRequest } from '@/lib'
 
 export const getEvents = async (): Promise<IEventsRes> => {
-  const { data } = await makeRequest.get<IEventsRes>('/events?sort=date')
+  const { data } = await makeRequest.get<IEventsRes>(
+    '/events?sort=date&populate=*'
+  )
   return data
 }
 
 export const getSingleEvent = async (slug: string): Promise<IEventsRes> => {
   const { data } = await makeRequest.get<IEventsRes>(
-    `/events/?filters[slug][$eq]=${slug}`
+    `/events/?filters[slug][$eq]=${slug}&populate=*`
   )
   return data
 }

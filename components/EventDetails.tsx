@@ -12,7 +12,13 @@ const EventDetails: FC<{ event: IEvent }> = ({ event }) => {
     <div className="min-h-screen grid grid-cols-1 md:grid-cols-3">
       <div className="md:col-span-2 bg-gradient-to-b md:bg-gradient-to-r from-primary to-tertiary">
         <Image
-          src={congregationPic}
+          src={
+            event.attributes.image && event.attributes.image.data !== null
+              ? event.attributes.image.data.attributes.url
+              : congregationPic
+          }
+          width={300}
+          height={300}
           alt="congregation"
           className="shadow-2xl w-full h-full"
         />
