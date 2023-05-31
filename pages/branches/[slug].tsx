@@ -12,19 +12,19 @@ import React from 'react'
 const BranchDetailsPage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = ({ branch }) => {
-  return <Layout children={<BranchDetails branch={branch} />} />
+  return (
+    <Layout>
+      <BranchDetails branch={branch} />
+    </Layout>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const branchesRes: IBranchesRes = await getBranches()
 
-  console.log(branchesRes)
-
   const paths = branchesRes.data.map((branch) => ({
     params: { slug: branch.attributes.slug },
   }))
-
-  console.log(paths)
 
   return { paths, fallback: false }
 }
