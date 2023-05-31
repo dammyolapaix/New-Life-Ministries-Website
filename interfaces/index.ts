@@ -1,4 +1,10 @@
-import { IBranch, IBranchAttributes, IBranchesRes } from './IBranch'
+import {
+  IBranch,
+  IBranchAttributes,
+  IBranchesRes,
+  IActivity,
+  IActivityAttributes,
+} from './IBranch'
 import { IEvent, IEventAttributes, IEventsRes } from './IEvent'
 import { IPastor, IPastorAttributes, IPastorsRes } from './IPastor'
 import { IMessagesRes, IMessage, IMessageAttributes } from './IMessage'
@@ -33,7 +39,13 @@ export type {
   IimageSmall,
 }
 
-export type { IBranch, IBranchAttributes, IBranchesRes }
+export type {
+  IBranch,
+  IBranchAttributes,
+  IBranchesRes,
+  IActivity,
+  IActivityAttributes,
+}
 export type { IPastor, IPastorAttributes, IPastorsRes }
 export type { IMinistriesRes, IMinistry, IMinistryAttributes }
 export type { IMessagesRes, IMessage, IMessageAttributes }

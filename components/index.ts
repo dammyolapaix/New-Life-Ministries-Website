@@ -1,3 +1,5 @@
+import ActivityItem from './ActivityItem'
+import BranchDetails from './BranchDetails'
 import BranchItem from './BranchItem'
 import Branches from './Branches'
 import EventItem from './EventItem'
@@ -11,7 +13,7 @@ import PastorDetails from './PastorDetails'
 import PastorItem from './PastorItem'
 import Pastors from './Pastors'
 
-export { Branches, BranchItem }
+export { ActivityItem, Branches, BranchItem, BranchDetails }
 export { EventItem }
 export { Layout }
 export { MessageDetails }
