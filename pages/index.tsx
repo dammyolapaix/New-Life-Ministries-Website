@@ -38,7 +38,7 @@ export default function Home() {
                   Join us today as we worship the Lord
                 </p>
                 <Link
-                  href={'/#services'}
+                  href={'/branches'}
                   className="px-10 py-5 bg-old-secondary text-gray-900 font-bold hover:bg-gradient-to-r from-other to-light rounded-md shadow-2xl"
                 >
                   Church With Us
@@ -113,89 +113,6 @@ export default function Home() {
                   around us.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Weekly Services */}
-        <section id="services" className="py-20">
-          <h2 className="font-semibold text-3xl text-center mb-10 text-tertiary">
-            Our Weekly Activities
-          </h2>
-          {/* 
-              Name of actvity
-              time
-              venue
-              Day(s) of the week
-               */}
-          <div className="container grid grid-cols-1 md:grid-cols-4 gap-10">
-            <div className="bg-white shadow-xl hover:shadow-2xl p-3 rounded-md">
-              <h3 className="font-semibold text-lg text-center text-primary mb-3">
-                Sunday Worship Service
-              </h3>
-              <div className="flex items-center">
-                <BiTime className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">12:30 - 15:00</h5>
-              </div>
-              <div className="flex items-center">
-                <MdOutlineToday className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">Sundays</h5>
-              </div>
-              <div className="flex items-center">
-                <CiLocationOn className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">Tt Vasumweg 4b</h5>
-              </div>
-            </div>
-            <div className="bg-white shadow-xl hover:shadow-2xl p-3 rounded-md">
-              <h3 className="font-semibold text-lg text-center text-primary mb-3">
-                Intercession Prayers
-              </h3>
-              <div className="flex items-center">
-                <BiTime className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">20:00 - 21:00</h5>
-              </div>
-              <div className="flex items-center">
-                <MdOutlineToday className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">Tuesdays and Thursdays</h5>
-              </div>
-              <div className="flex items-center">
-                <CiLocationOn className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">Online</h5>
-              </div>
-            </div>
-            <div className="bg-white shadow-xl hover:shadow-2xl p-3 rounded-md">
-              <h3 className="font-semibold text-lg text-center text-primary mb-3">
-                Virtual Bible Study
-              </h3>
-              <div className="flex items-center">
-                <BiTime className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">20:00 - 21:00</h5>
-              </div>
-              <div className="flex items-center">
-                <MdOutlineToday className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">Wednesdays</h5>
-              </div>
-              <div className="flex items-center">
-                <CiLocationOn className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">Online</h5>
-              </div>
-            </div>
-            <div className="bg-white shadow-xl hover:shadow-2xl p-3 rounded-md">
-              <h3 className="font-semibold text-lg text-center text-primary mb-3">
-                Friday Prayers
-              </h3>
-              <div className="flex items-center">
-                <BiTime className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">19:30 - 21:00</h5>
-              </div>
-              <div className="flex items-center">
-                <MdOutlineToday className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">Fridays</h5>
-              </div>
-              {/* <div className="flex items-center">
-                <CiLocationOn className="mr-1 text-secondary" />
-                <h5 className="ml-1 font-light">Online</h5>
-              </div> */}
             </div>
           </div>
         </section>
