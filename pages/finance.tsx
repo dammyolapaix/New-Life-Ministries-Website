@@ -41,6 +41,8 @@ const FinancePage: NextPage = () => {
         <div className="flex justify-center items-center rounded-md my-20">
           <Link
             href={'https://anbi.nl/publicatieverplichting/new-life-ministry/'}
+            target="_blank"
+            rel="noreferrer"
             className="px-5 py-3 bg-tertiary rounded-md text-white hover:bg-gradient-to-r from-primary to-secondary"
           >
             Learn More
