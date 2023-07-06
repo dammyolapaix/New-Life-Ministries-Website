@@ -38,7 +38,7 @@ export default function Home() {
                   Join us today as we worship the Lord
                 </p>
                 <Link
-                  href={'/branches'}
+                  href={'#'}
                   className="px-10 py-5 bg-old-secondary text-gray-900 font-bold hover:bg-gradient-to-r from-other to-light rounded-md shadow-2xl"
                 >
                   Church With Us
