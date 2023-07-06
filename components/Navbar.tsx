@@ -61,28 +61,34 @@ export default function Navbar() {
                 Home
               </Link>
               <Link
-                href={`${origin}/about`}
+                href={`#`}
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:border-b-2 hover:border-primary"
               >
                 About
               </Link>
               <Link
-                href={`${origin}/events`}
+                href={`#`}
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:border-b-2 hover:border-primary"
               >
                 Events
               </Link>
               <Link
-                href={`${origin}/messages`}
+                href={`#`}
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:border-b-2 hover:border-primary"
               >
                 Messages
               </Link>
               <Link
-                href={`${origin}/branches`}
+                href={`#`}
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:border-b-2 hover:border-primary"
               >
                 Branches
+              </Link>
+              <Link
+                href={`${origin}/finance`}
+                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:border-b-2 hover:border-primary"
+              >
+                Finance
               </Link>
               <Link
                 href={`${origin}/contact`}
