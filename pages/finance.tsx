@@ -16,7 +16,7 @@ const FinancePage: NextPage = () => {
           <div className="">Financial Reports 2021</div>
           <Link
             href={
-              '//assets.ctfassets.net/hpf25ynk4a49/T5ezAKt3j7m71HLucieSz/c40b3cea5485845018d1101de44bab04/Financial_Reports_2021.pdf'
+              'https://assets.ctfassets.net/hpf25ynk4a49/T5ezAKt3j7m71HLucieSz/c40b3cea5485845018d1101de44bab04/Financial_Reports_2021.pdf'
             }
             target="_blank"
             rel="noreferrer"
@@ -29,7 +29,7 @@ const FinancePage: NextPage = () => {
           <div className="">Financial Reports 2022</div>
           <Link
             href={
-              '//assets.ctfassets.net/hpf25ynk4a49/4XhU6qKg3sWELo7RDm6LjF/607a45ef635c504b889e2726a09e263a/Financial_Reports_2022.pdf'
+              'https://assets.ctfassets.net/hpf25ynk4a49/4XhU6qKg3sWELo7RDm6LjF/607a45ef635c504b889e2726a09e263a/Financial_Reports_2022.pdf'
             }
             target="_blank"
             rel="noreferrer"
@@ -41,6 +41,8 @@ const FinancePage: NextPage = () => {
         <div className="flex justify-center items-center rounded-md my-20">
           <Link
             href={'https://anbi.nl/publicatieverplichting/new-life-ministry/'}
+            target="_blank"
+            rel="noreferrer"
             className="px-5 py-3 bg-tertiary rounded-md text-white hover:bg-gradient-to-r from-primary to-secondary"
           >
             Learn More
