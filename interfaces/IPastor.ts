@@ -1,25 +1,17 @@
-import { IImage, IMeta } from './index'
-
-export interface IPastorsRes {
-  data: IPastor[]
-  meta: IMeta
-}
-
-export interface IPastor {
-  id: number
-  attributes: IPastorAttributes
-}
-
-export interface IPastorAttributes {
+export default interface IPastor {
+  _id: string
   name: string
-  slug: string
-  rank: string
-  address: string
-  email: string
-  about: string
-  phoneNumber: string
-  createdAt: Date
-  updatedAt: Date
-  publishedAt: Date
-  image?: IImage
+  slug: {
+    current: string
+  }
+  rank?: string
+  image?: {
+    asset: {
+      _ref: string
+    }
+  }
+  about?: string
+  address?: string
+  phoneNumber?: string
+  email?: string
 }

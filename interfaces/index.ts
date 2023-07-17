@@ -6,7 +6,7 @@ import {
   IActivityAttributes,
 } from './IBranch'
 import { IEvent, IEventAttributes, IEventsRes } from './IEvent'
-import { IPastor, IPastorAttributes, IPastorsRes } from './IPastor'
+import IPastor from './IPastor'
 import { IMessagesRes, IMessage, IMessageAttributes } from './IMessage'
 import IMeta from './IMeta'
 import IPagination from './IPagination'
@@ -47,7 +47,7 @@ export type {
   IActivity,
   IActivityAttributes,
 }
-export type { IPastor, IPastorAttributes, IPastorsRes }
+export type { IPastor }
 export type { IMinistriesRes, IMinistry, IMinistryAttributes }
 export type { IMessagesRes, IMessage, IMessageAttributes }
 export type { IFinance }

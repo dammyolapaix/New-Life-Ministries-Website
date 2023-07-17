@@ -14,7 +14,7 @@ const Pastors: FC<{ pastors: IPastor[] }> = ({ pastors }) => {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {pastors.map((pastor) => (
-          <div key={pastor.id}>
+          <div key={pastor._id}>
             <PastorItem pastor={pastor} />
           </div>
         ))}
