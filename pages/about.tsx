@@ -1,10 +1,12 @@
 import Layout from '@/components/Layout'
-import { Ministries, Pastors } from '@/components'
-import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
-import { IMinistriesRes, IPastorsRes } from '@/interfaces'
-import { getMinistries, getPastors } from '@/services'
+import { Pastors } from '@/components'
+import { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next'
+import { IPastor } from '@/interfaces'
+import { getPastors } from '@/services'
 
-const AboutPage: NextPage = () => {
+const AboutPage: NextPage<
+  InferGetServerSidePropsType<typeof getServerSideProps>
+> = ({ pastors }) => {
   return (
     <Layout>
       <header className="bg-gradient-to-b md:bg-gradient-to-r from-primary to-tertiary">
@@ -13,37 +15,23 @@ const AboutPage: NextPage = () => {
         </div>
       </header>
 
-      {/* <div className="my-20">
-        <Pastors pastors={pastorsRes.data} />
+      <div className="my-20">
+        <Pastors pastors={pastors} />
       </div>
 
-      <div className="my-20">
+      {/* <div className="my-20">
         <Ministries ministries={ministriesRes.data} />
       </div> */}
     </Layout>
   )
 }
 
-// export const getStaticProps: GetStaticProps<{
-//   pastorsRes: IPastorsRes
-//   ministriesRes: IMinistriesRes
-// }> = async () => {
-//   const pastorsRes: IPastorsRes = await getPastors()
-//   const ministriesRes: IMinistriesRes = await getMinistries()
+export const getServerSideProps: GetServerSideProps<{
+  pastors: IPastor[]
+}> = async () => {
+  const pastors: IPastor[] = await getPastors()
 
-//   if (!pastorsRes && !ministriesRes) {
-//     return {
-//       notFound: true,
-//     }
-//   }
-
-//   return {
-//     props: {
-//       pastorsRes,
-//       ministriesRes,
-//     },
-//     revalidate: 1,
-//   }
-// }
+  return { props: { pastors } }
+}
 
 export default AboutPage
