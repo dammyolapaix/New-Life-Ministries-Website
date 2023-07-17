@@ -1,16 +1,14 @@
-import { IPastorsRes } from '@/interfaces'
-import { makeRequest } from '@/lib'
+import { IPastor } from '@/interfaces'
+import { sanityClient } from '@/lib'
 
-export const getPastors = async (): Promise<IPastorsRes> => {
-  const { data } = await makeRequest.get<IPastorsRes>(
-    '/pastors?sort=id&populate=*'
-  )
-  return data
+export const getPastors = async (): Promise<IPastor[]> => {
+  const query = `*[_type == 'pastor'] | order(_createdAt desc)`
+
+  return await sanityClient.fetch(query)
 }
 
-export const getSinglePastor = async (slug: string): Promise<IPastorsRes> => {
-  const { data } = await makeRequest.get<IPastorsRes>(
-    `/pastors?filters[slug][$eq]=${slug}&populate=*`
-  )
-  return data
+export const getSinglePastor = async (slug: string): Promise<IPastor> => {
+  const query = `*[_type == 'pastor' && slug.current == "${slug}"][0]`
+
+  return await sanityClient.fetch(query)
 }

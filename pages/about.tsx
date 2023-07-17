@@ -2,7 +2,7 @@ import Layout from '@/components/Layout'
 import { Pastors } from '@/components'
 import { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next'
 import { IPastor } from '@/interfaces'
-import { sanityClient } from '@/lib'
+import { getPastors } from '@/services'
 
 const AboutPage: NextPage<
   InferGetServerSidePropsType<typeof getServerSideProps>
@@ -29,9 +29,7 @@ const AboutPage: NextPage<
 export const getServerSideProps: GetServerSideProps<{
   pastors: IPastor[]
 }> = async () => {
-  const query = `*[_type == 'pastor'] | order(_createdAt desc)`
-
-  const pastors: IPastor[] = await sanityClient.fetch(query)
+  const pastors: IPastor[] = await getPastors()
 
   return { props: { pastors } }
 }
