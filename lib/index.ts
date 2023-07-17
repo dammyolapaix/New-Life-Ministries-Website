@@ -1,5 +1,5 @@
 import makeRequest from './makeRequest'
-import contentfulClient from './contentfulClient'
+import sanityClient from './sanityClient'
 
 export { makeRequest }
-export { contentfulClient }
+export { sanityClient }

@@ -20,6 +20,7 @@ import {
   IimageSmall,
 } from './IImage'
 import { IMinistriesRes, IMinistry, IMinistryAttributes } from './IMinistry'
+import IFinance from './IFinance'
 
 export type {
   IEvent,
@@ -49,3 +50,4 @@ export type {
 export type { IPastor, IPastorAttributes, IPastorsRes }
 export type { IMinistriesRes, IMinistry, IMinistryAttributes }
 export type { IMessagesRes, IMessage, IMessageAttributes }
+export type { IFinance }
