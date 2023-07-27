@@ -19,7 +19,7 @@ import {
   IimageProviderMetadata,
   IimageSmall,
 } from './IImage'
-import { IMinistriesRes, IMinistry, IMinistryAttributes } from './IMinistry'
+import IMinistry from './IMinistry'
 import IFinance from './IFinance'
 
 export type {
@@ -48,6 +48,6 @@ export type {
   IActivityAttributes,
 }
 export type { IPastor }
-export type { IMinistriesRes, IMinistry, IMinistryAttributes }
+export type { IMinistry }
 export type { IMessagesRes, IMessage, IMessageAttributes }
 export type { IFinance }

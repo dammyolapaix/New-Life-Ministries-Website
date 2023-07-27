@@ -1,12 +1,12 @@
 import Layout from '@/components/Layout'
-import { Pastors } from '@/components'
+import { Ministries, Pastors } from '@/components'
 import { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next'
-import { IPastor } from '@/interfaces'
-import { getPastors } from '@/services'
+import { IMinistry, IPastor } from '@/interfaces'
+import { getMinistries, getPastors } from '@/services'
 
 const AboutPage: NextPage<
   InferGetServerSidePropsType<typeof getServerSideProps>
-> = ({ pastors }) => {
+> = ({ pastors, ministries }) => {
   return (
     <Layout>
       <header className="bg-gradient-to-b md:bg-gradient-to-r from-primary to-tertiary">
@@ -19,19 +19,21 @@ const AboutPage: NextPage<
         <Pastors pastors={pastors} />
       </div>
 
-      {/* <div className="my-20">
-        <Ministries ministries={ministriesRes.data} />
-      </div> */}
+      <div className="my-20">
+        <Ministries ministries={ministries} />
+      </div>
     </Layout>
   )
 }
 
 export const getServerSideProps: GetServerSideProps<{
   pastors: IPastor[]
+  ministries: IMinistry[]
 }> = async () => {
   const pastors: IPastor[] = await getPastors()
+  const ministries: IPastor[] = await getMinistries()
 
-  return { props: { pastors } }
+  return { props: { pastors, ministries } }
 }
 
 export default AboutPage

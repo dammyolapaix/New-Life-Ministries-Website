@@ -1,18 +1,14 @@
-import { IMinistriesRes } from '@/interfaces'
-import { makeRequest } from '@/lib'
+import { IMinistry } from '@/interfaces'
+import { sanityClient } from '@/lib'
 
-export const getMinistries = async (): Promise<IMinistriesRes> => {
-  const { data } = await makeRequest.get<IMinistriesRes>(
-    '/ministries?populate=*'
-  )
-  return data
+export const getMinistries = async (): Promise<IMinistry[]> => {
+  const query = `*[_type == 'ministry'] | order(_createdAt desc)`
+
+  return await sanityClient.fetch(query)
 }
 
-export const getSingleMinistry = async (
-  slug: string
-): Promise<IMinistriesRes> => {
-  const { data } = await makeRequest.get<IMinistriesRes>(
-    `/ministries?filters[slug][$eq]=${slug}&populate=*`
-  )
-  return data
+export const getSingleMinistry = async (slug: string): Promise<IMinistry> => {
+  const query = `*[_type == 'ministry' && slug.current == "${slug}"][0]`
+
+  return await sanityClient.fetch(query)
 }
