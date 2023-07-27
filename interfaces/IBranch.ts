@@ -1,27 +1,14 @@
-import { IMeta } from './index'
-
-export interface IBranchesRes {
-  data: IBranch[]
-  meta: IMeta
-}
-
 export interface IBranch {
-  id: number
-  attributes: IBranchAttributes
-}
-
-export interface IBranchAttributes {
+  _id: string
   name: string
-  slug: string
-  activities: { data: IActivity[] }
+  slug: {
+    current: string
+  }
+  activities: IActivity[]
 }
 
 export interface IActivity {
-  id: number
-  attributes: IActivityAttributes
-}
-
-export interface IActivityAttributes {
+  _id: number
   name: string
   time: string
   days: string

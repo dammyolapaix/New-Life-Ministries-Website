@@ -7,9 +7,7 @@ const BranchDetails: FC<{ branch: IBranch }> = ({ branch }) => {
     <section>
       <header className="bg-gradient-to-b md:bg-gradient-to-r from-primary to-tertiary">
         <div className="container h-80 flex justify-center items-center">
-          <h1 className="text-white font-bold text-4xl">
-            {branch.attributes.name}
-          </h1>
+          <h1 className="text-white font-bold text-4xl">{branch.name}</h1>
         </div>
       </header>
       <section className="">
@@ -17,12 +15,13 @@ const BranchDetails: FC<{ branch: IBranch }> = ({ branch }) => {
           Our Weekly Activities
         </h2>
 
-        <div className="container grid grid-cols-1 md:grid-cols-4 gap-10">
-          {branch.attributes.activities &&
-          branch.attributes.activities.data.length > 0 ? (
-            branch.attributes.activities.data.map((activity) => (
-              <ActivityItem key={activity.id} activity={activity} />
-            ))
+        <div className="container">
+          {branch.activities && branch.activities.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+              {branch.activities.map((activity) => (
+                <ActivityItem key={activity._id} activity={activity} />
+              ))}
+            </div>
           ) : (
             <div className="text-center font-bold text-2xl text-red-600">
               No Activity Found

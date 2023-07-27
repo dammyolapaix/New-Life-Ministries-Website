@@ -10,7 +10,7 @@ const Ministries: FC<{ ministries: IMinistry[] }> = ({ ministries }) => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {ministries.map((ministry) => (
-          <div key={ministry.id}>
+          <div key={ministry._id}>
             <MinistryItem ministry={ministry} />
           </div>
         ))}

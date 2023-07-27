@@ -8,9 +8,7 @@ const MinistryDetails: FC<{ ministry: IMinistry }> = ({ ministry }) => {
     <section>
       <header className="bg-gradient-to-b md:bg-gradient-to-r from-primary to-tertiary">
         <div className="container h-80 flex justify-center items-center">
-          <h1 className="text-white font-bold text-4xl">
-            {ministry.attributes.name}
-          </h1>
+          <h1 className="text-white font-bold text-4xl">{ministry.name}</h1>
         </div>
       </header>
 
@@ -18,25 +16,29 @@ const MinistryDetails: FC<{ ministry: IMinistry }> = ({ ministry }) => {
         <div className="container grid grid-cols-1 md:grid-cols-2">
           <Image
             src={
-              ministry.attributes.image
-                ? ministry.attributes.image.data.attributes.url
+              ministry.image
+                ? `https://cdn.sanity.io/images/q9bzhdm3/production/${
+                    ministry.image.asset._ref.split('-')[1]
+                  }-${ministry.image.asset._ref.split('-')[2]}.${
+                    ministry.image.asset._ref.split('-')[3]
+                  }`
                 : defaultMinistryPic
             }
-            alt={`Image of ${ministry.attributes.name}`}
+            alt={`Image of ${ministry.name}`}
             width={500}
             height={600}
             className="shadow-2xl mx-auto mb-10 md:mb-0"
           />
           <div>
             <h2 className="font-bold text-2xl text-primary mb-5">
-              {ministry.attributes.name}
+              {ministry.name}
             </h2>
-            {ministry.attributes.description && (
-              <p className="mb-3">{ministry.attributes.description}</p>
+            {ministry.description && (
+              <p className="mb-3">{ministry.description}</p>
             )}
-            {ministry.attributes.quote && (
+            {ministry.quote && (
               <q className="mb-3 text-secondary font-semibold">
-                {ministry.attributes.quote}
+                {ministry.quote}
               </q>
             )}
           </div>

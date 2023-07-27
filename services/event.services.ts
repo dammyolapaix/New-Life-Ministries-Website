@@ -1,16 +1,14 @@
-import { IEventsRes } from '@/interfaces'
-import { makeRequest } from '@/lib'
+import { IEvent } from '@/interfaces'
+import { sanityClient } from '@/lib'
 
-export const getEvents = async (): Promise<IEventsRes> => {
-  const { data } = await makeRequest.get<IEventsRes>(
-    '/events?sort=date&populate=*'
-  )
-  return data
+export const getEvents = async (): Promise<IEvent[]> => {
+  const query = `*[_type == 'event'] | order(date asc)`
+
+  return await sanityClient.fetch(query)
 }
 
-export const getSingleEvent = async (slug: string): Promise<IEventsRes> => {
-  const { data } = await makeRequest.get<IEventsRes>(
-    `/events/?filters[slug][$eq]=${slug}&populate=*`
-  )
-  return data
+export const getSingleEvent = async (slug: string): Promise<IEvent> => {
+  const query = `*[_type == 'event' && slug.current == "${slug}"][0]`
+
+  return await sanityClient.fetch(query)
 }
