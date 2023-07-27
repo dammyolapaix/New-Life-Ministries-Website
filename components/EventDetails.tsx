@@ -13,8 +13,12 @@ const EventDetails: FC<{ event: IEvent }> = ({ event }) => {
       <div className="md:col-span-2 bg-gradient-to-b md:bg-gradient-to-r from-primary to-tertiary">
         <Image
           src={
-            event.attributes.image && event.attributes.image.data !== null
-              ? event.attributes.image.data.attributes.url
+            event.image
+              ? `https://cdn.sanity.io/images/q9bzhdm3/production/${
+                  event.image.asset._ref.split('-')[1]
+                }-${event.image.asset._ref.split('-')[2]}.${
+                  event.image.asset._ref.split('-')[3]
+                }`
               : congregationPic
           }
           width={300}
@@ -25,34 +29,30 @@ const EventDetails: FC<{ event: IEvent }> = ({ event }) => {
       </div>
       <div className="md:col-span-1 container flex flex-col justify-center">
         <div className="lg:mt-20 mb-10">
-          <Countdown eventDate={new Date(event.attributes.date)} />
+          <Countdown eventDate={new Date(event.date)} />
         </div>
         <div className="mb-3">
           <h1 className="text-center font-medium text-2xl text-primary mb-5">
-            {event.attributes.name}
+            {event.name}
           </h1>
           <div className="flex items-center mb-1">
             <MdEvent className="mr-1 text-primary" />
-            <h5 className="ml-1 font-thin">
-              {formatDateToddmYYY(event.attributes.date)}
-            </h5>
+            <h5 className="ml-1 font-thin">{formatDateToddmYYY(event.date)}</h5>
           </div>
           <div className="flex items-center mb-1">
             <BiTime className="mr-1 text-primary" />
             <h5 className="ml-1 font-thin">
-              {event.attributes.time ? event.attributes.time : 'Not Given'}
+              {event.time ? event.time : 'Not Given'}
             </h5>
           </div>
           <div className="flex items-center mb-1">
             <MdLocationOn className="mr-1 text-primary" />
             <h5 className="ml-1 font-thin">
-              {event.attributes.venue ? event.attributes.venue : 'Not Given'}
+              {event.venue ? event.venue : 'Not Given'}
             </h5>
           </div>
         </div>
-        {event.attributes.description && (
-          <p className="font-thin">{event.attributes.description}</p>
-        )}
+        {event.description && <p className="font-thin">{event.description}</p>}
       </div>
     </div>
   )

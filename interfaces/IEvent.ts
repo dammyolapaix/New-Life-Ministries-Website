@@ -1,24 +1,16 @@
-import { IImage, IMeta } from './index'
-
-export interface IEventsRes {
-  data: IEvent[]
-  meta: IMeta
-}
-
-export interface IEvent {
+export default interface IEvent {
   id: number
-  attributes: IEventAttributes
-}
-
-export interface IEventAttributes {
   name: string
-  slug: string
+  slug: {
+    current: string
+  }
+  image?: {
+    asset: {
+      _ref: string
+    }
+  }
   description?: string
   date: string
   venue?: string
   time?: string
-  createdAt: Date
-  updatedAt: Date
-  publishedAt: Date
-  image?: IImage
 }

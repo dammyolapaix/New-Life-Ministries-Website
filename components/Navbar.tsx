@@ -67,7 +67,7 @@ export default function Navbar() {
                 About
               </Link>
               <Link
-                href={`#`}
+                href={`${origin}/events`}
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:border-b-2 hover:border-primary"
               >
                 Events
