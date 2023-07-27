@@ -8,13 +8,10 @@ import {
   FaTiktok,
   FaLinkedin,
 } from 'react-icons/fa'
-import { BiTime } from 'react-icons/bi'
 import congregationPic from '../public/john-price-RAZQiZOX3mU-unsplash.jpg'
 import pastorPic from '../public/Rev-Kingsley-Kusi-Head-Pastor.jpeg'
 import Layout from '@/components/Layout'
 import ContactUs from '@/components/ContactUs'
-import { MdOutlineToday } from 'react-icons/md'
-import { CiLocationOn } from 'react-icons/ci'
 
 export default function Home() {
   return (
@@ -38,7 +35,7 @@ export default function Home() {
                   Join us today as we worship the Lord
                 </p>
                 <Link
-                  href={'#'}
+                  href={'/branches'}
                   className="px-10 py-5 bg-old-secondary text-gray-900 font-bold hover:bg-gradient-to-r from-other to-light rounded-md shadow-2xl"
                 >
                   Church With Us

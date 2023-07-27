@@ -8,7 +8,18 @@ export const getBranches = async (): Promise<IBranch[]> => {
 }
 
 export const getSingleBranch = async (slug: string): Promise<IBranch> => {
-  const query = `*[_type == 'branch' && slug.current == "${slug}"][0]`
+  const query = `*[_type == 'branch' && slug.current == "${slug}"][0]{
+    _id,
+    name,
+    slug, 
+    "activities": *[_type == 'activity' && references(^._id)]{
+      _id,
+      name,
+      time,
+      days,
+      location
+    }
+}`
 
   return await sanityClient.fetch(query)
 }

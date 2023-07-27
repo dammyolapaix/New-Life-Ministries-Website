@@ -8,19 +8,19 @@ const ActivityItem: FC<{ activity: IActivity }> = ({ activity }) => {
   return (
     <div className="bg-white shadow-xl hover:shadow-2xl p-3 rounded-md">
       <h3 className="font-semibold text-lg text-center text-primary mb-3">
-        {activity.attributes.name}
+        {activity.name}
       </h3>
       <div className="flex items-center">
         <BiTime className="mr-1 text-secondary" />
-        <h5 className="ml-1 font-light">{activity.attributes.time}</h5>
+        <h5 className="ml-1 font-light">{activity.time}</h5>
       </div>
       <div className="flex items-center">
         <MdOutlineToday className="mr-1 text-secondary" />
-        <h5 className="ml-1 font-light">{activity.attributes.days}</h5>
+        <h5 className="ml-1 font-light">{activity.days}</h5>
       </div>
       <div className="flex items-center">
         <CiLocationOn className="mr-1 text-secondary" />
-        <h5 className="ml-1 font-light">{activity.attributes.location}</h5>
+        <h5 className="ml-1 font-light">{activity.location}</h5>
       </div>
     </div>
   )

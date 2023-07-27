@@ -4,15 +4,11 @@ export interface IBranch {
   slug: {
     current: string
   }
-  activities: { data: IActivity[] }
+  activities: IActivity[]
 }
 
 export interface IActivity {
-  id: number
-  attributes: IActivityAttributes
-}
-
-export interface IActivityAttributes {
+  _id: number
   name: string
   time: string
   days: string
