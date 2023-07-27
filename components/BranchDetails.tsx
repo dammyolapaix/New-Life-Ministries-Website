@@ -7,12 +7,10 @@ const BranchDetails: FC<{ branch: IBranch }> = ({ branch }) => {
     <section>
       <header className="bg-gradient-to-b md:bg-gradient-to-r from-primary to-tertiary">
         <div className="container h-80 flex justify-center items-center">
-          <h1 className="text-white font-bold text-4xl">
-            {branch.attributes.name}
-          </h1>
+          <h1 className="text-white font-bold text-4xl">{branch.name}</h1>
         </div>
       </header>
-      <section className="">
+      {/* <section className="">
         <h2 className="font-semibold text-3xl text-center my-10 text-tertiary">
           Our Weekly Activities
         </h2>
@@ -29,7 +27,7 @@ const BranchDetails: FC<{ branch: IBranch }> = ({ branch }) => {
             </div>
           )}
         </div>
-      </section>
+      </section> */}
     </section>
   )
 }
