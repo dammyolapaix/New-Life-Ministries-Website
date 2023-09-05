@@ -18,5 +18,15 @@ export default defineType({
         source: 'name',
       },
     }),
+    defineField({
+      name: 'location',
+      type: 'string',
+      title: 'Location',
+    }),
+    defineField({
+      name: 'image',
+      type: 'image',
+      title: 'Image',
+    }),
   ],
 })

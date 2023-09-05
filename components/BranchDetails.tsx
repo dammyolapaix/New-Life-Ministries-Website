@@ -6,8 +6,15 @@ const BranchDetails: FC<{ branch: IBranch }> = ({ branch }) => {
   return (
     <section>
       <header className="bg-gradient-to-b md:bg-gradient-to-r from-primary to-tertiary">
-        <div className="container h-80 flex justify-center items-center">
-          <h1 className="text-white font-bold text-4xl">{branch.name}</h1>
+        <div className="container h-80 flex justify-center items-center text-center">
+          <div>
+            <h1 className="text-white font-bold text-4xl mb-3">
+              {branch.name}
+            </h1>
+            <h2 className="text-white font-medium text-xl">
+              {branch.location}
+            </h2>
+          </div>
         </div>
       </header>
       <section className="">

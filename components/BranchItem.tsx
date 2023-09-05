@@ -8,7 +8,17 @@ const BranchItem: FC<{ branch: IBranch }> = ({ branch }) => {
   return (
     <Link href={`/branches/${branch.slug.current}`}>
       <Image
-        src={churchPicture}
+        src={
+          branch.image
+            ? `https://cdn.sanity.io/images/q9bzhdm3/production/${
+                branch.image.asset._ref.split('-')[1]
+              }-${branch.image.asset._ref.split('-')[2]}.${
+                branch.image.asset._ref.split('-')[3]
+              }`
+            : churchPicture
+        }
+        width={300}
+        height={300}
         alt={`Image of ${branch.name}`}
         className="shadow-2xl mb-3 mx-auto"
       />
