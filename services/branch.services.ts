@@ -12,6 +12,7 @@ export const getSingleBranch = async (slug: string): Promise<IBranch> => {
     _id,
     name,
     slug, 
+    location,
     "activities": *[_type == 'activity' && references(^._id)]{
       _id,
       name,

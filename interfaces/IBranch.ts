@@ -1,8 +1,14 @@
 export interface IBranch {
   _id: string
   name: string
+  location: string
   slug: {
     current: string
+  }
+  image?: {
+    asset: {
+      _ref: string
+    }
   }
   activities: IActivity[]
 }
